@@ -124,30 +124,66 @@ CREATE TABLE `Shift` (
     )
 );
 
-ALTER TABLE `Customers` ADD CONSTRAINT `fk_Customers_Customer_ID` FOREIGN KEY(`Customer_ID`)
-REFERENCES `Orders` (`Customer_ID`);
+-- Add index to the referenced column
+ALTER TABLE `Orders` ADD INDEX `idx_Customer_ID` (`Customer_ID`);
 
-ALTER TABLE `Address` ADD CONSTRAINT `fk_Address_Address_ID` FOREIGN KEY(`Address_ID`)
-REFERENCES `Orders` (`Address_ID`);
+-- Add the foreign key constraint
+ALTER TABLE `Customers` ADD CONSTRAINT `fk_Customers_Customer_ID`
+FOREIGN KEY (`Customer_ID`) REFERENCES `Orders` (`Customer_ID`);
 
-ALTER TABLE `Items` ADD CONSTRAINT `fk_Items_Item_ID` FOREIGN KEY(`Item_ID`)
-REFERENCES `Orders` (`Item_ID`);
+-- Add index to the referenced column
+ALTER TABLE `Orders` ADD INDEX `idx_Address_ID` (`Address_ID`);
 
-ALTER TABLE `Ingredients` ADD CONSTRAINT `fk_Ingredients_Ing_Name` FOREIGN KEY(`Ing_Name`)
-REFERENCES `Recipe` (`Ing_ID`);
+-- Add the foreign key constraint
+ALTER TABLE `Address` ADD CONSTRAINT `fk_Address_Address_ID`
+FOREIGN KEY (`Address_ID`) REFERENCES `Orders` (`Address_ID`);
 
-ALTER TABLE `Recipe` ADD CONSTRAINT `fk_Recipe_Row_ID` FOREIGN KEY(`Row_ID`)
-REFERENCES `Items` (`SKU`);
+-- Add index to the referenced column
+ALTER TABLE `Orders` ADD INDEX `idx_Item_ID` (`Item_ID`);
 
+-- Add the foreign key constraint
+ALTER TABLE `Items` ADD CONSTRAINT `fk_Items_Item_ID`
+FOREIGN KEY (`Item_ID`) REFERENCES `Orders` (`Item_ID`);
+
+-- Add index to the referenced column
+ALTER TABLE `Recipe` ADD INDEX `idx_Ing_ID` (`Ing_ID`);
+
+-- Add the foreign key constraint
+ALTER TABLE `Ingredients` ADD CONSTRAINT `fk_Ingredients_Ing_Name`
+FOREIGN KEY (`Ing_Name`) REFERENCES `Recipe` (`Ing_ID`);
+
+-- Modify Table
+ALTER TABLE `Recipe` MODIFY COLUMN `Row_ID` VARCHAR(50); -- Modify the data type of Row_ID to VARCHAR
+
+-- Add index to the referenced column
+ALTER TABLE `Items` ADD INDEX `idx_SKU` (`SKU`);
+
+-- Add the foreign key constraint
+ALTER TABLE `Recipe` ADD CONSTRAINT `fk_Recipe_Row_ID`
+FOREIGN KEY (`Row_ID`) REFERENCES `Items` (`SKU`);
+
+-- Add the foreign key constraint
 ALTER TABLE `Inventory` ADD CONSTRAINT `fk_Inventory_Item_ID` FOREIGN KEY(`Item_ID`)
 REFERENCES `Recipe` (`Ing_ID`);
 
-ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_Staff_ID` FOREIGN KEY(`Staff_ID`)
-REFERENCES `Rota` (`Staff_ID`);
+-- Add index to the referenced column
+ALTER TABLE `Rota` ADD INDEX `idx_Staff_ID` (`Staff_ID`);
 
-ALTER TABLE `Rota` ADD CONSTRAINT `fk_Rota_Date` FOREIGN KEY(`Date`)
-REFERENCES `Orders` (`Created_at`);
+-- Add the foreign key constraint
+ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_Staff_ID`
+FOREIGN KEY (`Staff_ID`) REFERENCES `Rota` (`Staff_ID`);
 
-ALTER TABLE `Shift` ADD CONSTRAINT `fk_Shift_Shift_ID` FOREIGN KEY(`Shift_ID`)
-REFERENCES `Rota` (`Shift_ID`);
+-- Add index to the referenced column
+ALTER TABLE `Orders` ADD INDEX `idx_Created_at` (`Created_at`);
+
+-- Add the foreign key constraint
+ALTER TABLE `Rota` ADD CONSTRAINT `fk_Rota_Date`
+FOREIGN KEY (`Date`) REFERENCES `Orders` (`Created_at`);
+
+-- Add index to the referenced column
+ALTER TABLE `Rota` ADD INDEX `idx_Shift_ID` (`Shift_ID`);
+
+-- Add the foreign key constraint
+ALTER TABLE `Shift` ADD CONSTRAINT `fk_Shift_Shift_ID`
+FOREIGN KEY (`Shift_ID`) REFERENCES `Rota` (`Shift_ID`);
 ```
