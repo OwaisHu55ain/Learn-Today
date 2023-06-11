@@ -7,6 +7,7 @@ Wrap code within the body of a function or procedure for repeated use.
 3. **Reusability:** Code can be used repeatedly.
 
 ### Procedures
+------------------
 Accept both input and output parameters.
 
 ```
@@ -20,6 +21,7 @@ CALL GetOrderDetail();
 ```
 
 ### Functions
+--------------------
 Accept only input parameters.
 
 ```
@@ -31,6 +33,7 @@ FROM Client Orders
 GROUP BY ClientID;
 ```
 ### Variable
+-----------------------
 Store and manipulate value with in your SQL statement.
 
 **Declare Variable:**
@@ -170,7 +173,8 @@ CALL SquareNumber(@x_number);
 SELECT @x_number;
 ```
 
-### CREATE FUNCTION
+### Create Functions
+-------------------------------
 
 **User-Defined Functions:** Created to perform operations that can’t be completed with built-in functions.
 
