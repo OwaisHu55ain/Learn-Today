@@ -30,7 +30,7 @@ SELECT ClientID ROUND(AVG(Cost), 2)
 FROM Client Orders
 GROUP BY ClientID;
 ```
-###Variable
+### Variable
 Store and manipulate value with in your SQL statement.
 
 **Declare Variable:**
@@ -170,15 +170,34 @@ CALL SquareNumber(@x_number);
 SELECT @x_number;
 ```
 
-**CREATE FUNCTION:** 
+### CREATE FUNCTION
+
+**User-Defined Functions:** Created to perform operations that can’t be completed with built-in functions.
+
+**DETERMINISTIC:** Specifies that the function always produce the same result for the same input values.
+
+**RETURNS:** Indicate the data type that the function will return.
+
+**RETURN:** Specify the value that the function will return. 
+
+
 ```
 DELIMITER //
-CREATE FUNCTION DiscountAmount(Cost DECIMAL(5,3))
-RETURNS DECIMAL(5, 2) DETERMINISTIC
-BEGIN IF (Cost >= 100 AND Cost < 500) THEN SET Cost = Cost-(Cost*0.1); 
-	ELSEIF (Cost >= 500) THEN SET Cost = Cost - (Cost*0.2); END IF; 
-RETURN (Cost);
-END //
-DELIMITER ;
+CREATE FUNCTION GetTotalCost(Cost DECIMAL(5,2))
+  RETURNS DECIMAL(5,2)
+  DETERMINISTIC
+BEGIN
+  IF (Cost >= 100 AND Cost < 500) THEN
+    SET Cost = Cost - (Cost * 0.1);
+  ELSEIF (Cost >= 500) THEN
+    SET Cost = Cost - (Cost * 0.2);
+  END IF;
+  SET Cost = ROUND(Cost, 2);
+  RETURN Cost;
+END//
+```
+```
+SELECT GetTotalCost(600); -- Output: 480.00
+SELECT GetTotalCost(250); -- Output: 225.00
 ```
 
