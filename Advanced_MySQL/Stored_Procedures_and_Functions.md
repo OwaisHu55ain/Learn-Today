@@ -32,6 +32,19 @@ SELECT ClientID ROUND(AVG(Cost), 2)
 FROM Client Orders
 GROUP BY ClientID;
 ```
+* **The key differences between stored procedures and functions are as following:**
+
+|S.No. 	|Functions							|Procedures							|
+|-------|---------------------------------------------------------------|---------------------------------------------------------------|
+|1.	|Created Using CREATE FUNCTION command 				|Created using CREATE PROCEDURE command				|
+|2.	|Invoked using the SELECT statement				|Invoked using the CALL statement				|
+|3.	|Must return the single value		      			|Output value via OUT parameter					|
+|4.	|Takes IN parameters only					|Takes IN, OUT and INOUT parameters				|
+|5.	|Typically encapsulate common formulas or generic business rule |Typically used the process, manipulate and modify database	|
+|6. 	|Must specify the data type of the return value      		|User must specify the OUT parameter type			|
+
+
+
 ### Variable
 -----------------------
 Store and manipulate value with in your SQL statement.
@@ -204,4 +217,17 @@ END//
 SELECT GetTotalCost(600); -- Output: 480.00
 SELECT GetTotalCost(250); -- Output: 225.00
 ```
-
+```
+DELIMITER //
+CREATE FUNCTION OrderDetail(Cost DECIMAL(6,2))
+RETURNS VARCHAR(25) DETERMINISTIC
+BEGIN
+	DECLARE Grade VARCHAR(25);
+	IF (Cost > 500 AND Cost < 800) THEN SET Grade = 'C';
+	ELSEIF (Cost > 800 AND Cost < 100) THEN SET Grade = 'B';
+	ELSEIF (Cost >= 1000) THEN SET Grade = 'A'; 
+	END IF; 
+    RETURN(Grade); 
+END //
+DELIMITER ;
+```
