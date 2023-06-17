@@ -1,14 +1,15 @@
-# Stored Procedures and Functions: 
+
+# Stored Procedures and Functions 
 Wrap code within the body of a function or procedure for repeated use.
 
-* **Benefits of Stored Procedures and Functions:**
+### Benefits of Stored Procedures and Functions
 1. **Consistency:** Code is  standardized.
 2. **Organization:** Code is organized.
 3. **Reusability:** Code can be used repeatedly.
 
 ### Procedures
 ------------------
-Accept both input and output parameters.
+A prepared SQL code that you can save, so the code can be reused over and over again. Stored Procedures accept both input and output parameters.
 
 ```
 CREATE PROCEDURE GetOrderDetail(Parameter1 INT, Parameter2 INT)
@@ -20,19 +21,68 @@ WHERE Salary BETWEEN Parameter1 AND Parameter2;
 CALL GetOrderDetail();
 ```
 
-### Functions
---------------------
-Accept only input parameters.
+```
+DELIMITER //
+CREATE PROCEDURE StudentResult(IN Marks DECIMAL(5,2), OUT Percentage DECIMAL(5,2), OUT Grade VARCHAR(25))
+BEGIN
+	IF (Marks >= 54 AND Marks < 63) THEN 
+		SET Percentage = (Marks/90)*100, Grade = 'B';
+	ELSEIF (Marks >= 63 AND Marks < 72) THEN 
+		SET Percentage = (Marks/90)*100, Grade = 'A';
+	ELSEIF (Marks > 72) THEN 
+		SET Percentage = (Marks/90)*100, Grade = 'A+';
+	END IF;
+END //
+DELIMITER ;
+```
 
 ```
-SELECT MOD(7, 5);
+CALL StudentResult(60, @Percentage, @Grade);
 ```
+
 ```
-SELECT ClientID ROUND(AVG(Cost), 2)
-FROM Client Orders
-GROUP BY ClientID;
+SELECT @Percentage, @Grade;
 ```
-* **The key differences between stored procedures and functions are as following:**
+
+### Functions
+--------------------
+A stored function in MySQL is a set of SQL statements that perform some task/operation and return a single value, Stored function accept only input parameters.
+
+```
+DELIMITER //
+CREATE FUNCTION CustomerRanking(Credit DECIMAL(12, 2))
+RETURNS VARCHAR(25) DETERMINISTIC
+BEGIN 
+	DECLARE Grade VARCHAR(25);
+    
+	If Credit < 50000 THEN
+		SET Grade = 'Silver';
+	ELSEIF Credit >= 50000 AND Credit < 75000 THEN
+		SET Grade = 'Gold';
+	ELSEIF Credit > 75000 THEN
+		SET Grade = 'Platinium';
+END IF;
+RETURN (Grade);
+END //
+DELIMITER ;
+```
+
+```
+SELECT CustomerRanking(80000);
+```
+
+```
+DROP FUNCTION CustomerRanking;
+```
+
+```
+SHOW FUNCTION STATUS WHERE db = 'trial';
+```
+
+
+### Differences Between Stored Procedure and Function
+
+The key differences between stored procedures and functions are as following:
 
 |S.No. 	|Functions							|Procedures							|
 |-------|---------------------------------------------------------------|---------------------------------------------------------------|
@@ -45,7 +95,7 @@ GROUP BY ClientID;
 
 
 
-### Variable
+### Variables
 -----------------------
 Store and manipulate value with in your SQL statement.
 
