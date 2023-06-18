@@ -1,9 +1,13 @@
-#Triggers and Events
+# Triggers and Events
 -----------------------------------
-##Triggers
+## Triggers
 A MySQL trigger is a stored program that is associated with a table. A trigger is activated before or after a defined SQL operation is performed on a table.  
 
 ### Using MySQL Triggers
+Every trigger associated with a table has a unique name and function based on two factors:
+1. **Time:** **BEFORE** and **AFTER** a specific row event.
+2. **Event:** **INSERT, UPDATE** or **DELETE.**
+
 ![Triggers](MySQL-Triggers.png)
 
 ### Triggers in Action 
@@ -75,7 +79,8 @@ DELIMITER ;
 ```
 ### BEFORE and AFTER Triggers
 1. **BEFORE** triggers are executed before the triggering event occurs. This means that the trigger code will execute before the data is changed.
-**BEFORE INSERT**
+
+  * **BEFORE INSERT**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_bi
@@ -89,7 +94,7 @@ END //
 DELIMITER ;
 ```
 
-**BEFORE UPDATE**
+  * **BEFORE UPDATE**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_bu
@@ -103,7 +108,7 @@ END //
 DELIMITER ;
 ```
 
-**BEFORE DELETE**
+  * **BEFORE DELETE**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_bd
@@ -117,7 +122,7 @@ DELIMITER ;
 
 2. **AFTER** triggers are executed after the triggering event occurs. This means that the trigger code will execute after the data has been changed.
 
-**AFTER INSERT**
+  * **AFTER INSERT**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_ai
@@ -129,7 +134,7 @@ END //
 DELIMITER ;
 ```
 
-**AFTER UPDATE**
+  * **AFTER UPDATE**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_au
@@ -141,7 +146,7 @@ END //
 DELIMITER ;
 ```
 
-**AFTER DELETE**
+  * **AFTER DELETE**
 ```
 DELIMITER //
 CREATE TRIGGER Employee_ad
