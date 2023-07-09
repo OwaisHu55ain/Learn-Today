@@ -1,14 +1,17 @@
 # Database Optimization
 It refers to the process of improving the performance and efficiency of a database system.
 
+
 **Benefits of Database Optimization**
 1. Improved performance
 2. Faster turnaround times
 3. Remove unwanted loads
 
+
 **Types of SQL Statements**
 1. Data retrieval statements
 2. Data change statements
+
 
 **Best Practices to optimize the SELECT Statements**
 1. Target only required columns
@@ -17,19 +20,24 @@ It refers to the process of improving the performance and efficiency of a databa
 4. Use INNER JOIN instead of OUTER JOIN
 5. Use clauses sparingly
 
+
 ## Optimizing the SELECT queries with the EXPLAIN statement
+
 
 **Overview of the EXPLAIN statement**
 
 When we run the explain statement, the result will show the 12 columns Lets examine the EXPLAIN statement by its columns.
 
 
+
 **EXPLAIN:** Provides information about how MySQL execute statements.
+
 
 
 **Column 01: ID**
 
 This column is a sequential identifier for each SELECT statement with in a query.
+
 
 
 **Column 02: SELECT_TYPE**
@@ -47,14 +55,18 @@ This column displays the type of select query to be executed.
 |DEPENDENT UNION		|The second or later SELECT of UNION is dependent on outer query	|
 |UNION RESULT			|The SELECT is the result of a UNION				|
 
+
+
 **Column 03: table**
 
 This column displays the name of the table referred into the SELECT query.
 
 
+
 **Column 04: Partition**
 
 This column displays the partition in which the data resides (the area of the physical storage that’s scanned).
+
 
 
 **Column 05: type**
@@ -73,9 +85,11 @@ Scanning the table means performing a search operation or finding matches specif
 |all | The entire table is scanned to find the matching rows. |
 
 
+
 **Column 06: possible_keys**
 
 This column shows the key that can be used by MySQL to find the row from the table.
+
 
 
 **Column 07: key**
@@ -83,9 +97,11 @@ This column shows the key that can be used by MySQL to find the row from the tab
 Indicate the actual index used by MySQL.
 
 
+
 **Column 08 : Key_len**
 
 This column indicate the length of the index the query optimizer chooses to uses.
+
 
 
 **Column 09 : ref **
@@ -93,9 +109,11 @@ This column indicate the length of the index the query optimizer chooses to uses
 This column shows which table columns have been compared to the index to perform the search.
 
 
+
 **Column 10 : rows**
 
 List the number of record that were examined to produce the output.
+
 
 
 **Column 11 : filtered**
@@ -103,9 +121,11 @@ List the number of record that were examined to produce the output.
 This column indicate an approximate percentage of the number of table rows that have been filtered by a specified condition.
 
 
+
 **Column 12 : extra**
 
 Contains additional information regarding the query execution plan.
+
 
 
 **Note** 
@@ -117,6 +137,8 @@ When explain statement is executed, it can return more detailed result but atten
 4. ref,
 5. rows
 6. extra
+
+
 
 ## INDEX 
 
@@ -133,6 +155,7 @@ ON Table_Name(Column1, Column2, Column3);
 DROP INDEX index_name 
 ON table_name;
 ```
+
 
 
 **Guidelines for Indexes**
