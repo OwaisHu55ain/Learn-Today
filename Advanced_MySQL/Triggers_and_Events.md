@@ -189,7 +189,7 @@ SHOW TRIGGERS
 2. **Recurring Events:** Scheduled events that occur on a regular basis.
 
 
-## Creating a one time event
+### Creating a one time event
 
 1. **Create new table named message:**
 ```
@@ -231,7 +231,7 @@ insert into messages(message,created_at)
 Values(‘test mysql event 2’, now());
 ```
 
-**Create a recurring event:**
+### Create a recurring event
 
 ```
 CREATE EVENT Test_Event_03
