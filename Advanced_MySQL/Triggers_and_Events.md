@@ -175,3 +175,70 @@ SHOW TRIGGERS
 [{FROM | IN} database_name]
 [LIKE 'pattern' | WHERE search_condition];
 ```
+
+## Events
+
+**Scheduled Events** A task that take place at a specific time according to a schedule. 
+1. All events have unique names.
+2. Each event contains one or more SQL statements.
+3. Event can occur once or multiple times.
+
+
+* **Types of Events**
+1. **One-time events:** Scheduled events that occurs just once.
+2. **Recurring Events:** Scheduled events that occur on a regular basis.
+
+
+## Creating a one time event
+
+1. **Create new table named message:**
+```
+CREATE TABLE Messages (
+Id INT PRIMARY KEY AUTO INCREMENT, 
+Message VARCHAR(255) NOT NULL,
+Created_At DATETIME NOT NULL);
+```
+
+
+2. **Create an event:**
+```
+CREATE EVENT IF NOT EXIST Test_Event_01
+ON SCHEDULE AT CURRENT_TIMESTAMP
+DO 
+INSERT INTO Message (Message, Created_At)
+VALUES (‘Test Mysql Event 01’, Now());
+```
+
+
+3. **Check the message:**
+```
+SELECT * FROM messages;
+```
+
+
+4. **Show all event in MYSQL:**
+```
+SHOW EVENTS FROM DatabaseName;
+```
+**To keep the event after it is expired**
+
+```
+Create event test_event_2
+On schedule at current_timestamp + interval + 1 minute
+On completion Preserve
+Do 
+insert into messages(message,created_at)
+Values(‘test mysql event 2’, now());
+```
+
+**Create a recurring event:**
+
+```
+CREATE EVENT Test_Event_03
+ON SCHEDULE EVERY 1 MINUTE
+STARTS CURRENT_TIMESTAMP
+ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR
+DO
+INSERT INTO Messages(Message, Created_At)
+VALUES(‘Test Mysql Recurrying Event’,Now());
+```
