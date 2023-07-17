@@ -1,5 +1,5 @@
-# Basics of Python Programming
-
+# Introduction to Python Programming
+## Definition
 **Programming**
 Programming it the ability to provide a computer with a set of instruction in a particular language that it can understand and perform those operation and task.
 
@@ -8,6 +8,7 @@ Programming it the ability to provide a computer with a set of instruction in a 
 Python is a general-purpose, high-level programming language.  Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs object-oriented approach aims to help programmers write clear, logical code for small and large scale of projects.
 
 
+## Use of Python in Real Life
 **Python is a popular programming language for variety of tasks, including:**
 1. Data Science
 2. Machine Learning
@@ -19,14 +20,15 @@ Python is a general-purpose, high-level programming language.  Its design philos
 8. Web Development
 
 
+## Features
 **Features of python**
 1. Simple and Easy to Learn
 2. Powerful
 3. Extensible
-4. Free and Open Source
+5. Free and Open Source
 
 
-### Variables
+## Variables
 A variable is a named location in memory that stores a value. Variable are used to store data that needs to be used throughout a program.
 
 **Variable Name:** Sequence of letters, numbers and underscore that is used to identify a value in memory.
@@ -56,14 +58,14 @@ A data type is an attribute associated with a piece of data that tells the compu
 
 **Python data types are as following:**
 
-1. **Numeric **
-  - **Integer:**  Whole number with no decimal places.
-  - **Float:** Contain decimal places.
-  - **Complex Number:** Made up of both real or imaginary numbers.
+1. **Numeric**
+  	- **Integer:**  Whole number with no decimal places.
+  	- **Float:** Contain decimal places.
+  	- **Complex Number:** Made up of both real or imaginary numbers.
 2. **Sequence**
-  - **String:** Sequence of characters that are enclosed either a single or double quotes.
-  - **List:** An array and hold any type inside the square brackets.
-  - **Tuples:** Same as list but they are immutable.
+  	- **String:** Sequence of characters that are enclosed either a single or double quotes.
+  	- **List:** An array and hold any type inside the square brackets.
+  	- **Tuples:** Same as list but they are immutable.
 3. **Dictionary:** Store data in key value object structure.
 4. **Boolean:** Simply represent as True and False.
 5. **Set:** An unordered and non-indexed collection of non-repeated value.
@@ -77,7 +79,7 @@ A data type is an attribute associated with a piece of data that tells the compu
 |Float|Decimal|2.3,4.3,5.6|
 
 
-### Flow Control
+## Flow Control
 **Comparison Operator:**
 |Operator|Meaning|Example|
 |------------|-----------|------------|
@@ -87,7 +89,6 @@ A data type is an attribute associated with a piece of data that tells the compu
 |>|Greater Than |A>B|
 |<=|Less Than Or Equal To| A<=|
 |>= | Greater Than Or Equal To|A>=B|
-
 
 ```
 a = 10.0
@@ -112,16 +113,13 @@ print(variableB)
 
 name = ‘Owais’
 print(name) 
-
- # Reassigning a variable
-
+ #Reassigning a variable
 name = ‘John’
 print(name)
 ```
 
 
-### Commenting Code
-
+## Commenting Code
 **Comments are helpful in following ways:**
 1. Explaining what the code is intended to do.
 2. Let developers knows that code is deprecated.
@@ -133,14 +131,12 @@ print(name)
 The use of # symbol tells python to ignore everything after this point until the end of the current line.
 ```
  # I’m a comment.
-
 X = 10
 ```
 
 
 2. **Multi Line Comments**
 A multi line comment in python can be written using either triple single quotes (‘’’) or triple double quotes.
-
 ```
 ‘’’ this is the multi line comment, 
 using the single triple quotes’’’
@@ -156,8 +152,7 @@ The # symbol tells the python to ignore everything after this point until the en
 X = 10 # This is in line comment.
 ```
 
-### Built-in Functions:
-
+## Built-in Functions:
 **print()**
 Display the value passed to it.
 ```
@@ -241,8 +236,8 @@ print(name[3]) #output: i
 print(name[4]) #output: s
 ```
 
-**Creating Function:**
- Python function is a block of code that is executed when it is called.  To create a function in Python you use the **def** keyword.
+## Creating Function
+Python function is a block of code that is executed when it is called.  To create a function in Python you use the **def** keyword.
 ```
 def greeting(name):
     print('Hello '+name+' !')
@@ -252,10 +247,8 @@ def greeting(name):
     return 'Hello '+name+' !'
 print(greeting('Owais'))
 ```
-### User Input and Console Output:
+## User Input and Console Output:
 User input is the data that is entered by the user, while console output is the data that is displayed by the console.
-
-
 **sep=**
 Used to specify the separator.
 ```
@@ -270,5 +263,7 @@ It specifies the string that should be appended at the end of printed output.
 print('hello'.title(), end=' ')
 print('world'.title(), end='!')
 ```
+
+
 
 
