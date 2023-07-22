@@ -1,7 +1,7 @@
 # Introduction to Python Programming
 ## Definition
 **Programming**
-Programming it the ability to provide a computer with a set of instruction in a particular language that it can understand and perform those operation and task.
+Programming is the process of giving a computer a specific set of instructions in a particular language that it can comprehend and execute, enabling it to perform a desired operation or task.
 
 
 **Python**
@@ -32,8 +32,11 @@ Python is a general-purpose, high-level programming language.  Its design philos
 A variable is a named location in memory that stores a value. Variable are used to store data that needs to be used throughout a program.
 
 **Variable Name:** Sequence of letters, numbers and underscore that is used to identify a value in memory.
-**Variable assignment:** process of storing a value in a variable.
-**Actual Value:** refer to the value of a variable, expression or object.
+
+**Variable assignment:** Process of storing a value in a variable.
+
+**Actual Value:** Refers to the value of a variable, expression or object.
+
 ```
 name = 'Owais'
 print(name) # output:  Owais
@@ -80,7 +83,11 @@ A data type is an attribute associated with a piece of data that tells the compu
 
 
 ## Flow Control
-**Comparison Operator:**
+Flow control refers to the mechanisms and constructs used to control the order in which statements and instructions are executed in a program.
+
+
+**Comparison Operator:** A comparison operator is a type of operator in programming that allows you to compare two values or variables.
+
 |Operator|Meaning|Example|
 |------------|-----------|------------|
 |==|Equal|A==A|
@@ -138,11 +145,11 @@ X = 10
 2. **Multi Line Comments**
 A multi line comment in python can be written using either triple single quotes (‘’’) or triple double quotes.
 ```
-‘’’ this is the multi line comment, 
-using the single triple quotes’’’
+''' this is the multi line comment, 
+using the single triple quotes'''
 
-“”” this is also a multi line comment,
-Using the triple double quotes.”””
+""" this is also a multi line comment,
+Using the triple double quotes."""
 ```
 
 
@@ -171,8 +178,10 @@ prints(name) # output: display the value which was entered by the user.
 ## Type casting:
 **Process of converting one data type to another. Python has to types of conversion:**
 
-Implicit: When the python interpreter automatically converts a value from one data type to another. 
-Explicit: When you explicitly convert a value from one data type to another by using built in function.
+**Implicit:** When the python interpreter automatically converts a value from one data type to another. 
+
+
+**Explicit:** When you explicitly convert a value from one data type to another by using built in function.
 
 1. **str():** Converts a number or float into string.
 2. **int():** Converts a string or float into the integer.
@@ -238,6 +247,7 @@ print(name[4]) #output: s
 
 ## Creating Function
 Python function is a block of code that is executed when it is called.  To create a function in Python you use the **def** keyword.
+
 ```
 def greeting(name):
     print('Hello '+name+' !')
@@ -247,8 +257,11 @@ def greeting(name):
     return 'Hello '+name+' !'
 print(greeting('Owais'))
 ```
+
 ## User Input and Console Output:
 User input is the data that is entered by the user, while console output is the data that is displayed by the console.
+
+
 **sep=**
 Used to specify the separator.
 ```
