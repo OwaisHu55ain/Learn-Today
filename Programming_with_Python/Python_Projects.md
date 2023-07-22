@@ -55,3 +55,28 @@ for game in range(len(board)):
 
 theBoard(board)
 ```
+## 3. Guess The Number (Computer)
+
+```
+import random
+
+def computer_guess(x):
+    low = 1
+    high = x
+    feedback = ''
+    while feedback != 'c': 
+        if low != high:
+            guess = random.randint(low, high)
+        else:
+            guess = low
+        feedback = input(f'Is this {guess} number? Plesse share your feedback, Is it High (H), Low (L) or Correct (C):' ).lower()
+        if feedback == 'h':
+            high = guess-1
+        elif feedback == 'l':
+            low = guess+1
+    
+    print(f'Horray! Computer guessed your number {guess}, Correctly..')
+
+computer_guess(100)
+
+```
