@@ -1,10 +1,12 @@
 # Introduction to Python Programming
-## Definition
+## Definitions
 **Programming**
+
 Programming is the process of giving a computer a specific set of instructions in a particular language that it can comprehend and execute, enabling it to perform a desired operation or task.
 
 
 **Python**
+
 Python is a general-purpose, high-level programming language.  Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs object-oriented approach aims to help programmers write clear, logical code for small and large scale of projects.
 
 
