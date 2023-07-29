@@ -46,8 +46,11 @@ Control flow refers to the order in which the instructions in program are execut
 
 **There are two types of control flows:**
 **1. Condition Statements**
+
 **if:** States that if the condition proves to True, a function is performed.
+
 **else:** Catches anything which is not caught by the preceding conditions.
+
 **elif:** Tests multiple conditions sequentially when the initial “if” condition evaluate to False.
 
 ```
@@ -89,16 +92,22 @@ print(f'Total Bill: {billTotal}')
 
 
 **2. Looping Construct**
+
 A programming construct that allows you to execute a block of code repeatedly.
 
 
 **Benefits of using looping construct:**
+
+
 **Efficiency:** Used to automate tasks and process large amount of data.
+
 **Readability:** Looping construct are very readable.
+
 **Flexibility:** Used to iterate over any iterate able object.
 
 
 **for** 
+
 Checks for specific conditions and then repeatedly execute a block of code as long as those conditions are met.
 ```
 employee = ['Owais', 'Osama', 'Hussain']
@@ -109,6 +118,7 @@ for name in range(len(employee)):
 
 
 **enumerate**
+
 Used to iterate over a sequence and return both the index and value of each element in the sequence.
 ```
 employee = ['Owais', 'Osama', 'Hussain']
@@ -118,7 +128,8 @@ for no, name in enumerate(employee):
 
 
 **break** 
-break statement in python is used to terminate a loop prematurely.
+
+Break statement in python is used to terminate a loop prematurely.
 ```
  #Starter Code
 favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
@@ -133,6 +144,7 @@ else:
 
 
 **continue** 
+
 Used to skip the rest of iteration of loop and continue with the next iteration.
 ```
  #Starter Code
@@ -146,6 +158,7 @@ for dessert in favorites:
 
 
 **while** 
+
 Repeat a specific block of code an unknown number of times until a condition is met.
 
 ```
@@ -161,16 +174,21 @@ A match statement compares a value to several different conditions until one is 
 
 
 **match**
+
 Starts by evaluating the value. If the value matches one of the patterns, then code block associated with that pattern is executed.
 
 
 **case**
+
 The case clauses in the match statement can be used to match any type of value.
 
 
 **Benefits of using match statement:**
+
 **1. Flexibility:** Used to match any type of value.
+
 **2. Power:** Matches complex patters.
+
 **3. Readability:** More readable than switch statement.
 
 ```
