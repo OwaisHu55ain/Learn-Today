@@ -80,3 +80,48 @@ def computer_guess(x):
 computer_guess(100)
 
 ```
+
+## 4. Create a Pet List
+
+```
+ # This program will creat a list of pets that you will enter and diplay all of them.
+
+pet_names = []
+
+while True:
+    name = input(f'Enter your pet no. {str(len(pet_names)+1)}. (Or blank to exit).')
+    if name == '':
+        break
+    else:
+        pet_names = pet_names + [name]
+
+for no, names in enumerate(pet_names):
+    print(f'Pet No. {no+1}: {names}')
+
+```
+
+## 5. Rock, Paper and Scissors
+
+```
+import random
+
+def play():
+    user = input("What is your choice? 'r' for rock, 'p' for paper, 's' for scissor.\n")
+    computer = random.choice(['r', 'p', 's'])
+
+    if user == computer:
+        return "It's a Tie."
+
+    if is_win(user, computer):
+        return 'You Won!'
+    
+    return 'You Lost'
+
+def is_win(player, opponent):
+    if (player == 'r' and opponent == 's') | (player == 's' and opponent == 'p') | (player == 'p' and opponent == 'r'):
+        return True
+
+print(play())
+
+```
+
