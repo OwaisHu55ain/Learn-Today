@@ -2,12 +2,17 @@
 ## Definitions
 **Programming**
 
-Programming is the process of giving a computer a specific set of instructions in a particular language that it can comprehend and execute, enabling it to perform a desired operation or task.
+Programming is the process of instructing a computer to perform specific tasks or solve problems by providing it with a set of precise and logical instructions written in a programming language.
+
+
+**Programming Language**
+
+A programming language is a formal system of rules and syntax used to write and communicate instructions to a computer for the purpose of creating software and controlling its behavior.
 
 
 **Python**
 
-Python is a general-purpose, high-level programming language.  Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs object-oriented approach aims to help programmers write clear, logical code for small and large scale of projects.
+Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility.
 
 
 ## Use of Python in Real Life
@@ -31,7 +36,8 @@ Python is a general-purpose, high-level programming language.  Its design philos
 
 
 ## Variables
-A variable is a named location in memory that stores a value. Variable are used to store data that needs to be used throughout a program.
+In Python, a variable is a symbolic name that represents a value or data stored in computer memory. It allows you to store and manipulate data within a program.
+
 
 **Variable Name:** Sequence of letters, numbers and underscore that is used to identify a value in memory.
 
@@ -260,7 +266,8 @@ def greeting(name):
 print(greeting('Owais'))
 ```
 
-## User Input and Console Output:
+## User Input and Console Output
+
 User input is the data that is entered by the user, while console output is the data that is displayed by the console.
 
 
