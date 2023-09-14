@@ -1,17 +1,14 @@
 # Introduction to Python Programming
 ## Definitions
 **Programming**
-
 Programming is the process of instructing a computer to perform specific tasks or solve problems by providing it with a set of precise and logical instructions written in a programming language.
 
 
 **Programming Language**
-
 A programming language is a formal system of rules and syntax used to write and communicate instructions to a computer for the purpose of creating software and controlling its behavior.
 
 
 **Python**
-
 Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility.
 
 
