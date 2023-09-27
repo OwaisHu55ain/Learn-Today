@@ -1,5 +1,4 @@
 # Programming Paradigm
-
 A programming paradigm is a fundamental style or approach to programming that dictates how programmer organize and structure code to solve problem.
 
 
@@ -88,11 +87,9 @@ This is mainly used for optimization problems. It is similar to the divide and c
 This one finds the best solution in each and every step instead of approaching optimization in a global way.
 
 **Refactoring**
-
 Refactoring is the process of refactoring the existing code or software to improve its internal structure
 
 **Algorithm Complexity**
-
 Algorithmic complexity is a measure of the time or resources required for an algorithm to complete its task based on the size of the input, often denoted as 'n', which represents the number of elements. Algorithmic complexity can be categorized into two main types.
 
 1. **Time Complexity**: Time complexity is a measure of the computational or execution time required by an algorithm to solve a problem based on the size of the input.
@@ -100,7 +97,6 @@ Algorithmic complexity is a measure of the time or resources required for an alg
 2. **Space Complexity**: Space complexity refers to the amount of memory or storage space required by an algorithm to perform its task based on the size of the input.
 
 ## Big O Notation
-
 Big O Notation is the most fundamental tool to measure the cost of an algorithm. It describes the complexity of the code using algebraic terms.
 
 1. **Constant:** The algorithm takes the same amount of time to run regardless of the size of its input.
