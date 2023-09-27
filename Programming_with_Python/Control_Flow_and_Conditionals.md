@@ -45,6 +45,7 @@ if  not(5>6) or not(5>6):
 Control flow refers to the order in which the instructions in program are executed.
 
 **There are two types of control flows:**
+
 **1. Condition Statements**
 
 **if:** States that if the condition proves to True, a function is performed.
@@ -108,7 +109,9 @@ A programming construct that allows you to execute a block of code repeatedly.
 
 **for** 
 
-Checks for specific conditions and then repeatedly execute a block of code as long as those conditions are met.
+A for loop in Python is used to iterate over a sequence (such as a list, tuple, or string) and execute a block of code for each element in the sequence.
+
+
 ```
 employee = ['Owais', 'Osama', 'Hussain']
 
@@ -131,15 +134,15 @@ for no, name in enumerate(employee):
 
 Break statement in python is used to terminate a loop prematurely.
 ```
- #Starter Code
-favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
+fruits = ["apple", "banana", "cherry", "date", "fig"]
 
-for dessert in favorites:
-    if dessert == 'Pudding':
-        print('Yes one of my favorite desserts is', dessert)
-        break 
-else:
-    print('No sorry, not a dessert on my list')
+for fruit in fruits:
+    if fruit == "cherry":
+        break
+    print("I like", fruit)
+
+print("Loop is done.")
+
 ```
 
 
