@@ -145,6 +145,10 @@ The following resources will be helpful as additional references in dealing with
 
 
 https://realpython.com/python-recursion/
+
+
 https://stackabuse.com/functional-programming-in-python/
+
+
 https://www.knowledgehut.com/blog/programming/python-map-list-comprehension
 
