@@ -139,3 +139,12 @@ for x in filter_employee:
     print(x)
 ```
 
+## Additional Resources
+
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module. 
+
+
+https://realpython.com/python-recursion/
+https://stackabuse.com/functional-programming-in-python/
+https://www.knowledgehut.com/blog/programming/python-map-list-comprehension
+
