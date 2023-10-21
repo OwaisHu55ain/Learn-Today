@@ -2,17 +2,19 @@
 Functional programming is a paradigm of building computer programs using expressions and functions without mutating state and data.
 
 
-**Function**
+## Function
 A function is a block of code that only executes when it is called. You can pass data, known as parameters, into a function. A function can return data as a result. It takes an input, processes it, and then produces a result.
 
 
-**Pure Function**
+## Pure Function
+
 A pure function always returns the same result for same argument values and it has no side effect like modifying an argument or global variable.
 
  
 **Differences between Pure and Traditional Function**
+
 |Traditional Function			|Pure Function				|
-|---------------------------------------------------+----------------------------------------------------|
+|---------------------------------------+---------------------------------------|
 |Access global state			|Cannot access global state		|
 |Modify global state			|Cannot modify global state		|
 |Access local state			|Access local state			|
@@ -20,11 +22,13 @@ A pure function always returns the same result for same argument values and it h
 |Output does not depend on input	|Output depends on input		|
 
 
-**Benefits of Pure Function**
+## Benefits of Pure Function
+
 1. **Predictable Outcome:** Pure functions always produce the same result for the same set of inputs, making their behavior highly predictable and reliable.
 2. **Consistent Code:** Pure functions provide a consistent and reliable behavior, ensuring that they perform the intended tasks without unexpected side effects.
 3. **Caching:** Because pure functions produce consistent results for the same inputs, they can be easily cached, optimizing performance in situations where the same computation is repeated with the same input values.
 4. **Multi-threading:** Pure functions are well-suited for multi-threaded or concurrent programming environments because they don't rely on shared mutable state, reducing the risk of race conditions and making parallelization more manageable.
+
 
 
 ```
@@ -43,7 +47,8 @@ print(newList)
 
 ```
 
-**Recursion**
+## Recursion
+
 Recursion is programming technique where function call itself directly or indirectly to solve the problem.
 
 
