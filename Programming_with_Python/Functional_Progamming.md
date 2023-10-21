@@ -13,13 +13,13 @@ A pure function always returns the same result for same argument values and it h
  
 **Differences between Pure and Traditional Function**
 
-|Traditional Function			|Pure Function				|
-|---------------------------------------+---------------------------------------|
-|Access global state			|Cannot access global state		|
-|Modify global state			|Cannot modify global state		|
-|Access local state			|Access local state			|
-|Can change args			|Cannot change args			|
-|Output does not depend on input	|Output depends on input		|
+| Traditional Function           | Pure Function                  |
+| -----------------------------  | ------------------------------  |
+| Access global state            | Cannot access global state     |
+| Modify global state            | Cannot modify global state     |
+| Access local state             | Access local state             |
+| Can change args                | Cannot change args             |
+| Output does not depend on input | Output depends on input       |
 
 
 ## Benefits of Pure Function
