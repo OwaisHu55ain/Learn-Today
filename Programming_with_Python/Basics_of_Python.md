@@ -168,19 +168,84 @@ X = 10 # This is in line comment.
 ```
 
 ## Built-in Functions:
-**print()**
-Display the value passed to it.
-```
-print(‘hello world’) # output : hello world
-```
+
+Python comes with a rich set of built-in functions that provide essential functionality for a wide range of tasks. Here are some commonly used built-in functions in Python:
 
 
-**input()**
-Used to get input from the user.
-```
-name = input(‘what is your name? ’)
-prints(name) # output: display the value which was entered by the user.
-```
+1. **`print()`**: Outputs text or variables to the console.
+
+    ```python
+    print("Hello, World!")
+    ```
+
+2. **`len()`**: Returns the length of an object (e.g., string, list, tuple).
+
+    ```python
+    my_list = [1, 2, 3, 4, 5]
+    length = len(my_list)
+    ```
+
+3. **`type()`**: Returns the type of an object.
+
+    ```python
+    my_variable = 42
+    variable_type = type(my_variable)
+    ```
+
+4. **`input()`**: Reads a line from the user input.
+
+    ```python
+    user_input = input("Enter something: ")
+    ```
+
+5. **`int()`, `float()`, `str()`**: Convert values to integer, float, or string types, respectively.
+
+    ```python
+    num_str = "42"
+    num_int = int(num_str)
+    ```
+
+6. **`range()`**: Generates a sequence of numbers.
+
+    ```python
+    numbers = list(range(5))
+    ```
+
+7. **`max()`, `min()`**: Returns the maximum or minimum value from a sequence.
+
+    ```python
+    numbers = [2, 5, 1, 8, 3]
+    max_value = max(numbers)
+    ```
+
+8. **`sum()`**: Returns the sum of all elements in a sequence.
+
+    ```python
+    numbers = [1, 2, 3, 4, 5]
+    total = sum(numbers)
+    ```
+
+9. **`sorted()`**: Returns a sorted version of a list, tuple, or string.
+
+    ```python
+    my_list = [3, 1, 4, 1, 5, 9, 2]
+    sorted_list = sorted(my_list)
+    ```
+
+10. **`abs()`**: Returns the absolute value of a number.
+
+    ```python
+    absolute_value = abs(-42)
+    ```
+
+11. **`round()`**: Rounds a floating-point number to the nearest integer.
+
+    ```python
+    rounded_number = round(3.14159, 2)
+    ```
+
+These are just a few examples of the many built-in functions available in Python. The Python documentation is an excellent resource for exploring the full list and details of these functions: [Python Built-in Functions](https://docs.python.org/3/library/functions.html).
+
 
 
 ## Type casting:
