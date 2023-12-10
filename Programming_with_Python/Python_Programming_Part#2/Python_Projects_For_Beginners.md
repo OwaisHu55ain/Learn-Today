@@ -71,7 +71,50 @@ display_board(tic_tac_toe_board)
 
 ```
 
-## Summary:
+### Summary:
 
 In above code defines a basic tic-tac-toe game where players "X" and "O" take turns making moves on a 3x3 grid represented by a dictionary. The display_board function shows the current state of the board, and the game alternates between players until the board is filled. Players input their moves, updating the board accordingly, and the program switches turns. The final state of the board is displayed, reflecting the moves made by both players throughout the game. The code showcases the use of a dictionary to represent the game board, alternating turns between players, and dynamically updating the board based on user input, creating a simple interactive tic-tac-toe experience.
 
+
+## Number Guessing Game (Computer)
+
+
+
+```python
+import random
+
+def computer_guess(x):
+    # Set the initial range for the computer's guess
+    low = 1
+    high = x
+    
+    # Initialize feedback variable to a value that won't trigger the loop initially
+    feedback = ''
+    
+    # Continue looping until the feedback is 'c' (correct)
+    while feedback != 'c': 
+        # Check if the range is not a single number
+        if low != high:
+            # Generate a random guess within the current range
+            guess = random.randint(low, high)
+        else:
+            # If the range is a single number, set the guess to that number
+            guess = low
+        
+        # Get feedback from the user about the computer's guess
+        feedback = input(f'Is this {guess} number? Please share your feedback, Is it High (H), Low (L) or Correct (C):' ).lower()
+        
+        # Adjust the range based on the user's feedback
+        if feedback == 'h':
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+    
+    # Print a message when the correct number is guessed
+    print(f'Hooray! Computer guessed your number {guess} correctly.')
+
+ # Call the function with an example range (e.g., 1 to 100)
+computer_guess(100)
+```
+### Summary
+This code represents a simple number guessing game where the computer tries to guess a number that the user has in mind. The user provides feedback ('H' for too high, 'L' for too low, 'C' for correct), and the computer adjusts its guess accordingly until it correctly guesses the user's number.
